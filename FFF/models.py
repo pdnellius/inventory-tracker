@@ -20,3 +20,5 @@ class Item(models.Model):
     item_type = models.ForeignKey('ItemType', null=False, blank=False)
     location = models.CharField(max_length=128)  # TODO
     quantity = models.IntegerField()
+    date_bought = models.DateField(auto_now_add=True)
+    date_consumed = models.DateField()
